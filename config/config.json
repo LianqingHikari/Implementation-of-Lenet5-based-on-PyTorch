@@ -1,0 +1,10 @@
+{
+  "batch_size": 64,
+  "lr": 0.001,
+  "epochs": 10,
+  "checkpoints_path": "./checkpoints",
+  "train_image_path": "./dataset/train-images.idx3-ubyte",
+  "train_label_path": "./dataset/train-images.idx3-ubyte",
+  "test_image_path": "./dataset/train-images.idx3-ubyte",
+  "test_label_path": "./dataset/train-images.idx3-ubyte"
+}
