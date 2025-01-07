@@ -23,6 +23,8 @@ class LeNet5(nn.Module):
         x = F.tanh(self.conv2(x))
         x = self.avgpool(x)
 
+        # 按照原文的实现，这里把特征图展平后过全连接层
+        # 更为合理的实现应该是过一个5*5的卷积把通道数变为120，特征图大小变为1*1，然后过全连接层
         x = x.view(-1, 16 * 5 * 5)
 
         x = F.tanh(self.fc1(x))

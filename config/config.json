@@ -3,8 +3,10 @@
   "lr": 0.001,
   "epochs": 10,
   "checkpoints_path": "./checkpoints",
+  "device": "cuda",
+  "log_path": "./log/output.log",
   "train_image_path": "./dataset/train-images.idx3-ubyte",
-  "train_label_path": "./dataset/train-images.idx3-ubyte",
-  "test_image_path": "./dataset/train-images.idx3-ubyte",
-  "test_label_path": "./dataset/train-images.idx3-ubyte"
+  "train_label_path": "./dataset/train-labels.idx1-ubyte",
+  "test_image_path": "./dataset/t10k-images.idx3-ubyte",
+  "test_label_path": "./dataset/t10k-labels.idx1-ubyte"
 }

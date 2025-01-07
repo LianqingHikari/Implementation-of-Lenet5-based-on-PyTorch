@@ -1,7 +1,7 @@
 import argparse
 import json
 
-json_path = "./config.json"
+json_path = "./config/config.json"
 
 
 # 这里设计了两种加载的参数的方式，json和命令行
@@ -11,13 +11,16 @@ def parse_args():
     # 加载命令行参数
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--batch-size", type=int, )
+    parser.add_argument("--batch-size", type=int)
     parser.add_argument("--lr", type=float)
     parser.add_argument("--epochs", type=int)
+    parser.add_argument("--device", type=str)
+    parser.add_argument("--log_path", type=str)
     parser.add_argument("--train_image_path", type=str)
     parser.add_argument("--train_label_path", type=str)
     parser.add_argument("--test_image_path", type=str)
     parser.add_argument("--test_label_path", type=str)
+
 
     return parser.parse_args()
 
@@ -44,8 +47,3 @@ def get_merge_config():
     json_config = load_json(json_path)
     config = merge_config(json_config, args)
     return config
-
-
-if __name__ == '__main__':
-    config = get_merge_config()
-    print(config)
